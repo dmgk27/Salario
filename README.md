@@ -1,12 +1,6 @@
 # Salario
 
-#include <iostream>	
-#include <string>	
-#include <sstream>	
-#include <stdio.h>
-#include <ctype.h>
-using namespace std;	
-	
+
 class Coleccion{
 
 private:
