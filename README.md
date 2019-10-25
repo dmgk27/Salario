@@ -1,17 +1,22 @@
 # Salario
-#include <iostream>
-#include <string>
-#include <sstream>
+
+#include <iostream>	
+#include <string>	
+#include <sstream>	
 #include <stdio.h>
 #include <ctype.h>
-using namespace std;
+using namespace std;	
+	
 class Coleccion{
+
 private:
+
 	float salario[250];
 	int tamanno;
 	int cantidad;
 	
 public:
+
 	Coleccion(){
 		tamanno = 10;
 		cantidad = 10;
@@ -31,6 +36,7 @@ public:
 	}
 	
 	string toString(){
+	
 		stringstream ss;
 		ss<<"-------------------NUMEROS-----------------------"<<endl<<endl;
 		for (int i = 0; i < cantidad; i++){
@@ -43,12 +49,15 @@ public:
 		
 	}
 	void setCantidad(int cantidad){
+	
 		this->cantidad=cantidad;
 	}
 	int getCantidad(){
+	
 		return this->cantidad;
 	}
 	float montoAjusSalMin(float salMin){
+	
 		float  resta=0, suma=0;
 		for (int i = 0; i < cantidad; i++){
 			if(salario[i] < salMin){
@@ -63,6 +72,7 @@ public:
 		return suma;
 	}
 	void ajusteSalMin(float salMin){
+	
 		for (int i = 0; i < cantidad; i++){
 			if(salario[i] < salMin){
 				salario[i]=salMin;
@@ -72,6 +82,7 @@ public:
 		}
 	}
 	float calculoCotizacion(){
+	
 		float  multiplicacion=0, suma=0,resta=0;
 		for (int i = 0; i < cantidad; i++){
 				multiplicacion=salario[i]*0.917;
@@ -81,7 +92,9 @@ public:
 		return suma;
 	}
 };
-int main(int argc, char *argv[]) {
+
+int main() {
+
 	Coleccion a;
 	float min=0,capital=0;
 	cout<<a.toString()<<endl;
